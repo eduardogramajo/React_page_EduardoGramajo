@@ -4,9 +4,10 @@ const App = () =>{
     return(
         <>
            <Header/>
+           
 
            <footer>
-               <h4>ALCHEMIST STORE</h4>
+               <h4>&reg; ALCHEMIST STORE</h4>
            </footer>
 
         </>
