@@ -2,6 +2,7 @@ import React from "react";
 
 import ReactDOM from "react-dom";
 
-const Titulo = () => <h1>ALCHEMIST STORE</h1>
+import App from "./App"
 
-ReactDOM.render(<Titulo/> , document.getElementById("main"))
+
+ReactDOM.render(<App/> , document.getElementById("main"))
