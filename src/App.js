@@ -5,7 +5,6 @@ const App = () =>{
         <>
            <Header/>
            
-
            <footer>
                <h4>&reg; ALCHEMIST STORE</h4>
            </footer>
