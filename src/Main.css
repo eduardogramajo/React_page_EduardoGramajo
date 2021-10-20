@@ -6,6 +6,7 @@
 }
 
 .menu{
+    background-color: yellow;
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -25,4 +26,18 @@ a:link{
 a:hover {
    color: red;
    text-shadow: 2px 2px 3px black;
+}
+
+.carrito{
+    margin-left: 20px;
+    font-size: 48px;
+    color: black;
+}
+
+a > .carrito:hover{
+    color: red;
+}
+
+a > .carrito:link{
+    color: black;
 }

@@ -1,17 +1,27 @@
 import Header from "./Header";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+import ItemListContainer from "./ItemListContainer";
 
-const App = () =>{
-    return(
+const App = () => {
+
+    const  user = "Eduardo"
+
+    return (
         <>
-           <Header/>
-           
-           <footer>
-               <h4>&reg; ALCHEMIST STORE</h4>
-           </footer>
+            <div className="container-fluid">
 
+                <Header/>
+
+                <NavBar/>
+
+                <ItemListContainer mensaje={`Bienvenido ${user} a Alchemist Store tu mundo coleccionable`}/>
+
+                <Footer/>
+
+            </div>
         </>
     )
 }
-
 
 export default App
