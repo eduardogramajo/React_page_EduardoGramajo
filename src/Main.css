@@ -41,3 +41,14 @@ a > .carrito:hover{
 a > .carrito:link{
     color: black;
 }
+
+.estilo{
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.margen{
+    margin-top: 50px;
+}

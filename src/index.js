@@ -2,10 +2,10 @@ import React from "react";
 
 import ReactDOM from "react-dom";
 
-import App from "./App"
+import App from "./App";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import "./Main.css"
+import "./Main.css";
 
 ReactDOM.render(<App/> , document.getElementById("main"))
