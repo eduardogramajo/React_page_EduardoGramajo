@@ -6,8 +6,8 @@ const ItemListContainer = (props) => {
         <div>
             <h2>{props.mensaje}</h2>
 
-            <ItemCount stock = "5" initial = "1" />
-            <ItemCount stock = "0" initial = "1"/>
+            <ItemCount stock = "5" initial = {1} onAdd={function(){alert("Gracias por tu compra")}} />
+            <ItemCount stock = "1" initial = {1} onAdd={function(){alert("Gracias por tu compra")}}/>
         </div>
 
     )

@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Button } from 'react-bootstrap'
 
 const ItemCount = (props) => {
 
@@ -31,6 +32,13 @@ const ItemCount = (props) => {
                 <p>{unidades}</p>
                 <button className="btn btn-primary" onClick={handleStock.restarStock} disabled={stock === "0" && unidades === 0}> - </button>
                 <p className="estilo">Stock disponible: {stock}</p>
+            </div>
+
+            <div className="container d-flex justify-content-center">
+                <Button variant="primary" onClick={props.onAdd} disabled={stock === 0 && unidades === 0}>Agregar al carrito</Button>
+            </div>
+            <div className="container d-flex justify-content-center">
+                <p>Stock disponible: {stock}</p>
             </div>
 
         </div>
