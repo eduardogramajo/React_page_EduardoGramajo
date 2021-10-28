@@ -1,7 +1,7 @@
 import Header from "./Header";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import ItemListContainer from "./ItemListContainer";
+import ItemListContainer from "./ItemListContainer/ItemListContainer.js";
 
 const App = () => {
 
