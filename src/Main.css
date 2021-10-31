@@ -1,12 +1,22 @@
-.titulo{
-    font-size: 5rem;
-    text-align: center;
-    background-color: red;
-    box-shadow: 2px 2px 1px black;
+.imgLogo {
+    display: block;
+    margin: 0 auto;
 }
 
-.menu{
-    background-color: yellow;
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 7px black, 0 0 8px black, 0 0 21px black, 0 0 42px red, 0 0 82px red, 0 0 92px red, 0 0 102px red, 0 0 151px red;
+    font-family: 'Bebas Neue', cursive;
+}
+
+h2{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+.menu {
+    background-color: rgb(255, 8, 0);
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -14,41 +24,44 @@
     margin: 0 auto;
 }
 
-.menu > li{
+.menu>li {
     font-size: 2.5rem;
-    padding: 0 10px 0 10px;
+    padding: 0 10px 0 33px;
+    letter-spacing: 5px;
+    font-family: 'Bebas Neue', cursive;
 }
 
-a:link{
+a:link {
     text-decoration: none;
+    color: #fff;
 }
 
 a:hover {
-   color: red;
-   text-shadow: 2px 2px 3px black;
+    color: rgb(15, 1, 1);
+    text-shadow: 2px 2px 3px rgb(245, 238, 238);
 }
 
-.carrito{
+.carrito {
     margin-left: 20px;
     font-size: 48px;
     color: black;
 }
 
-a > .carrito:hover{
-    color: red;
+a>.carrito:hover {
+    color: rgb(238, 241, 12);
 }
 
-a > .carrito:link{
+a>.carrito:link {
     color: black;
 }
 
-.estilo{
+.estilo {
     font-size: 2rem;
     color: black;
     text-align: center;
     font-weight: bold;
 }
 
-.margen{
+.margen {
     margin-top: 50px;
 }

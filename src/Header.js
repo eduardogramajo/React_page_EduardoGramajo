@@ -1,7 +1,12 @@
 const Header = () =>{
     return (
-        <header>
-            <h1 className="titulo">ALCHEMIST STORE</h1>           
+        <header className= "container-fluid fondo">
+            <div>
+                <div>
+                    <img src="img/imgSitio/LOGO.png" width="50%" height="auto" class="imgLogo"
+                            alt="ALCHEMISTSTORE"/>
+                </div>
+            </div>          
         </header>
     )
 }

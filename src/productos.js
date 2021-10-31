@@ -3,14 +3,16 @@ const productos = [
         titulo: "LUFFY GEAR SECOND",
         precio: "$15000",
         img: "img/figuras/BANDAI/luffy.jpg",
-        id: "1"
+        id: "1",
+        stock: "5"
     },
 
     {
         titulo: "MAZINKAISER CHOGOKIN",
         precio: "$35000",
         img: "img/figuras/BANDAI/mazin.jpg",
-        id: "2"        
+        id: "2",
+        stock: "12"        
     },
     {
         titulo: "BARDOCK & GOKU",
@@ -85,9 +87,9 @@ const productos = [
         id: "14"
     },
     {
-        titulo: "SPAWN VII",
-        precio: "$15500",
-        img: "img/figuras/MCFARLANE/t-800.jpg",
+        titulo: "WOLVERINE",
+        precio: "$45500",
+        img: "img/figuras/KOTOBUKIYA/wolverine.jpg",
         id: "15"
     },
 ]
