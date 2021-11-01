@@ -5,6 +5,7 @@ const ItemCount = (props) => {
 
     const [stock, setStock] = useState(props.stock > 0 ? props.stock - props.initial : 0)
     const [unidades, setUnidades] = useState(props.stock > 0 ? props.initial : 0)
+    const [compra, setCompra] = useState(props.stock > 0 ? props.initial : 0)
 
     const handleStock = {
         sumaStock: () => {
@@ -22,7 +23,14 @@ const ItemCount = (props) => {
                 setStock(stock + 1)
                 setUnidades(unidades - 1)
             }
-        }
+        },
+        onAdd: () => {
+            if (compra === 0) {
+                alert("El valor ingresado debe ser mayor a 0")
+            } else {
+                alert("Se ha agregado " + unidades + " unidades")
+            }
+        },
     }
 
     return (
@@ -31,11 +39,10 @@ const ItemCount = (props) => {
                 <button className="btn btn-primary" onClick={handleStock.sumaStock} disabled={stock === "0" && unidades === 0} > + </button>
                 <p>{unidades}</p>
                 <button className="btn btn-primary" onClick={handleStock.restarStock} disabled={stock === "0" && unidades === 0}> - </button>
-                <p className="estilo">Stock disponible: {stock}</p>
             </div>
 
             <div className="container d-flex justify-content-center">
-                <Button variant="primary" onClick={props.onAdd} disabled={stock === 0 && unidades === 0}>Agregar al carrito</Button>
+                <Button variant="primary" onClick={handleStock.onAdd} disabled={stock === 0 && unidades === 0}>Agregar al carrito</Button>
             </div>
             <div className="container d-flex justify-content-center">
                 <p>Stock disponible: {stock}</p>

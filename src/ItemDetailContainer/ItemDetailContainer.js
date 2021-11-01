@@ -1,34 +1,34 @@
-import ItemList from "./ItemList/ItemList"
+import ItemDetail from "./ItemDetail/ItemDetail"
 import productos_list from "../productos"
 import { useState, useEffect } from 'react'
-import {Spinner} from 'react-bootstrap'
+import { Spinner } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 
+const ItemDetailContainer = () => {
 
-const ItemListContainer = (props) => {
-
-    const [productos, setProductos] = useState([])
+    const [producto, setProducto] = useState([])
     const [cargando, setCargando] = useState(true)
 
     useEffect(() => {
-        const articulos = () => {
+        const getItem = () => {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
                     resolve(productos_list)
-                }, 2000)
+                }, 4000)
             })
         }
-        articulos().then((item) => {
-            setProductos(item)
-            setCargando(false)
-        })
+        getItem()
+            .then((item) => {
+                const producto = item.find((producto => producto.id === "7"))
+                setProducto(producto)
+                setCargando(false)
+            })
     }, [])
 
-    return (
-        <div>
-            <h2>{props.mensaje}</h2>
-            
 
+
+    return (
+        <>
             {
                 cargando ? <><Button variant="primary" disabled>
                     <Spinner
@@ -50,16 +50,13 @@ const ItemListContainer = (props) => {
                         />
                         Loading...
                     </Button></> : (
-                    < div className="container-fluid row d-flex justify-content-center my-3 text-center">
-                        <h1>NUESTROS PRODUCTOS</h1>
-                        <ItemList items={productos} />
+                    < div >
+                        <h2>ITEM SELECCIONADO</h2>
+                        <ItemDetail id={producto.id} titulo={producto.titulo} precio={producto.precio} imagen={producto.img} stock={producto.stock} descr={producto.descr} />
                     </div>
                 )}
-        </div>
-
+        </>
     )
-
 }
 
-export default ItemListContainer
-
+export default ItemDetailContainer
