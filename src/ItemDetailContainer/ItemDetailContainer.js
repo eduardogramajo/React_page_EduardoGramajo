@@ -3,30 +3,36 @@ import productos_list from "../productos"
 import { useState, useEffect } from 'react'
 import { Spinner } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
+import { useParams } from "react-router"
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = (titulo) => {
+
 
     const [producto, setProducto] = useState([])
     const [cargando, setCargando] = useState(true)
 
+    const { id_item } = useParams()
+    
+    console.log(producto)
+    
     useEffect(() => {
         const getItem = () => {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    resolve(productos_list)
-                }, 4000)
+                    const item_search = productos_list.find((prod => prod.id === id_item))
+                    resolve(item_search)
+                }, 2000)
             })
         }
         getItem()
-            .then((item) => {
-                const producto = item.find((producto => producto.id === "7"))
-                setProducto(producto)
+            .then((prod) => {
+                setProducto(prod)
                 setCargando(false)
             })
-    }, [])
+    }, [id_item])
 
 
-
+    
     return (
         <>
             {
@@ -38,7 +44,7 @@ const ItemDetailContainer = () => {
                         role="status"
                         aria-hidden="true"
                     />
-                    <span className="visually-hidden">Loading...</span>
+                    <span className="visually-hidden">Cargandoo...</span>
                 </Button>{' '}
                     <Button variant="primary" disabled>
                         <Spinner
@@ -48,11 +54,11 @@ const ItemDetailContainer = () => {
                             role="status"
                             aria-hidden="true"
                         />
-                        Loading...
+                        Cargandoo...
                     </Button></> : (
                     < div >
-                        <h2>ITEM SELECCIONADO</h2>
-                        <ItemDetail id={producto.id} titulo={producto.titulo} precio={producto.precio} imagen={producto.img} stock={producto.stock} descr={producto.descr} />
+                        <h2>{titulo}</h2>
+                        <ItemDetail key={producto.id} id={producto.id} titulo={producto.titulo} precio={producto.precio} imagen={producto.img} stock={producto.stock} descr={producto.descr} />
                     </div>
                 )}
         </>

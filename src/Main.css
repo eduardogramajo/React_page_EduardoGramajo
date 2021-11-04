@@ -112,3 +112,9 @@ a>.carrito:link {
     font-family: 'Bebas Neue', cursive;
     font-size: 4rem;
 }
+
+.card{
+    background-color: #558ABB;
+    border-radius: 15px;
+  }
+

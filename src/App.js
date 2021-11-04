@@ -1,29 +1,46 @@
 import Header from "./Header";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import Contacto from "./Contacto";
 import ItemListContainer from "./ItemListContainer/ItemListContainer.js";
 import ItemDetailContainer from "./ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const App = () => {
 
-    const  user = "Eduardo"
+    const user = "Eduardo"
 
     return (
-        <>
+        <BrowserRouter>
             <div className="container-fluid">
 
-                <Header/>
+                <Header />
 
-                <NavBar/>
+                <NavBar />
 
-                <ItemListContainer mensaje={`Bienvenido ${user} a Alchemist Store tu mundo coleccionable`}/>
+                <Switch>
+                    <Route path="/" exact>
+                        <ItemListContainer mensaje={`Bienvenido ${user} a Alchemist Store tu mundo coleccionable`} />
+                    </Route>
+                
+                    <Route path="/item/:id_item" exact>
+                        <ItemDetailContainer titulo="ITEM SELECCIONADO" />
+                    </Route>
 
-                <ItemDetailContainer/>
+                    <Route path="/info" exact>
+                        <Contacto />
+                    </Route>
+                    
+                    <Route path="/contacto" exact>
+                        <Contacto />
+                    </Route>
 
-                <Footer/>
+                </Switch>
+
+                <Footer />
 
             </div>
-        </>
+        </BrowserRouter>
     )
 }
 
