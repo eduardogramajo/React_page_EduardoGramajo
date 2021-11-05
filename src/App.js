@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Contacto from "./Contacto";
 import ItemListContainer from "./ItemListContainer/ItemListContainer.js";
 import ItemDetailContainer from "./ItemDetailContainer/ItemDetailContainer";
+import Info from "./Info";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const App = () => {
@@ -20,15 +21,19 @@ const App = () => {
 
                 <Switch>
                     <Route path="/" exact>
-                        <ItemListContainer mensaje={`Bienvenido ${user} a Alchemist Store tu mundo coleccionable`} />
+                        <ItemListContainer mensaje={`Bienvenido ${user} a Alchemist Store tu mundo coleccionable`} tit="NUESTROS PRODUCTOS" />
                     </Route>
                 
                     <Route path="/item/:id_item" exact>
                         <ItemDetailContainer titulo="ITEM SELECCIONADO" />
                     </Route>
 
+                    <Route path="/:filtrado/:id_filtrado" exact>
+                        <ItemListContainer mensaje={""} />
+                    </Route>F
+
                     <Route path="/info" exact>
-                        <Contacto />
+                        <Info/>
                     </Route>
                     
                     <Route path="/contacto" exact>

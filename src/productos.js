@@ -5,7 +5,8 @@ const productos = [
         precio: "$15000",
         img: "..//img/figuras/BANDAI/luffy.jpg",
         stock: "5",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"bandai"
     },
 
     {
@@ -14,7 +15,8 @@ const productos = [
         precio: "$35000",
         img: "..//img/figuras/BANDAI/mazin.jpg",
         stock: "12",
-        categoria: "die cast"
+        categoria: "diecast",
+        marca:"bandai"
     },
     {
         id: "3",
@@ -22,7 +24,8 @@ const productos = [
         precio: "$12000",
         img: "..//img/figuras/BANPRESTO/bardock_goku.jpg",
         stock: "10",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"banpresto"
     },
     { 
         id: "4",
@@ -30,7 +33,8 @@ const productos = [
         precio: "$14000",
         img: "..//img/figuras/BANPRESTO/deku.jpg", 
         stock: "9",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"banpresto"
     },
     {
         id: "5",
@@ -38,7 +42,8 @@ const productos = [
         precio: "$7000",
         img: "..//img/figuras/BANPRESTO/gogeta.jpg",
         stock: "10",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"banpresto"
     },
     {
         id: "6",
@@ -46,7 +51,8 @@ const productos = [
         precio: "$6000",
         img: "..//img/figuras/BANPRESTO/goku.jpg",
         stock: "15",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"banpresto"
     },
     {
         id: "7",
@@ -55,7 +61,8 @@ const productos = [
         img: "..//img/figuras/BANPRESTO/luffy.jpg",
         stock: "5",
         descr: "Monkey D. Luffy se une a la serie de figuras King of Artist en su nueva forma, Gear Fourth: Boundman, con una altura de 17 cm, una cuidada paleta de colores y un detallado esculpido dinámico lleno de energía.",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"banpresto"
     },
     {
         id: "8",
@@ -63,7 +70,8 @@ const productos = [
         precio: "$35000",
         img: "..//img/figuras/KOTOBUKIYA/batman.jpg",
         stock: "12",
-        categoria: "statue"
+        categoria: "statue",
+        marca:"kotobukiya"
     },
     {
         id: "9",
@@ -71,7 +79,8 @@ const productos = [
         precio: "$20000",
         img: "..//img/figuras/KOTOBUKIYA/DarkMagician.jpg",
         stock: "9",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"kotobukiya"
     },
     {
         id: "10",
@@ -79,7 +88,8 @@ const productos = [
         precio: "$16500",
         img: "..//img/figuras/KOTOBUKIYA/hiei.jpg",
         stock: "10",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"kotobukiya"
     },
     {
         id: "11",
@@ -87,7 +97,8 @@ const productos = [
         precio: "$5500",
         img: "..//img/figuras/MCFARLANE/spseries26.jpg",
         stock: "15",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"mcfarlane"
     },
     {
         id: "12",
@@ -95,7 +106,8 @@ const productos = [
         precio: "$5500",
         img: "..//img/figuras/MCFARLANE/t-800.jpg",
         stock: "5",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"mcfarlane"
     },
     {
         id: "13",
@@ -103,7 +115,8 @@ const productos = [
         precio: "$5500",
         img: "..//img/figuras/MCFARLANE/spcomando.jpg",
         stock: "12",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"mcfarlane"
     },
     {
         id: "14",
@@ -111,7 +124,8 @@ const productos = [
         precio: "$7500",
         img: "..//img/figuras/MCFARLANE/raven.jpg",
         stock: "9",
-        categoria: "pvc"
+        categoria: "pvc",
+        marca:"mcfarlane"
     },
     {
         id: "15",
@@ -119,7 +133,8 @@ const productos = [
         precio: "$45500",
         img: "..//img/figuras/KOTOBUKIYA/wolverine.jpg",
         stock: "10",
-        categoria: "statue"
+        categoria: "statue",
+        marca:"kotobukiya"
     },
 ]
 

@@ -1,6 +1,7 @@
 .imgLogo {
     display: block;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 h1 {
@@ -118,3 +119,4 @@ a>.carrito:link {
     border-radius: 15px;
   }
 
+  
