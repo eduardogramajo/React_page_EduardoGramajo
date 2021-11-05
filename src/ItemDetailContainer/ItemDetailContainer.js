@@ -1,9 +1,8 @@
 import ItemDetail from "./ItemDetail/ItemDetail"
 import productos_list from "../productos"
 import { useState, useEffect } from 'react'
-import { Spinner } from 'react-bootstrap'
-import { Button } from 'react-bootstrap'
 import { useParams } from "react-router"
+import Cargando from "..//Cargando"
 
 const ItemDetailContainer = (titulo) => {
 
@@ -12,9 +11,9 @@ const ItemDetailContainer = (titulo) => {
     const [cargando, setCargando] = useState(true)
 
     const { id_item } = useParams()
-    
+
     console.log(producto)
-    
+
     useEffect(() => {
         const getItem = () => {
             return new Promise((resolve, reject) => {
@@ -32,36 +31,31 @@ const ItemDetailContainer = (titulo) => {
     }, [id_item])
 
 
-    
+
     return (
-        <>
-            {
-                cargando ? <><Button variant="primary" disabled>
-                    <Spinner
-                        as="span"
-                        animation="border"
-                        size="l"
-                        role="status"
-                        aria-hidden="true"
-                    />
-                    <span className="visually-hidden">Cargandoo...</span>
-                </Button>{' '}
-                    <Button variant="primary" disabled>
-                        <Spinner
-                            as="span"
-                            animation="grow"
-                            size="l"
-                            role="status"
-                            aria-hidden="true"
-                        />
-                        Cargandoo...
-                    </Button></> : (
-                    < div >
-                        <h2>{titulo}</h2>
-                        <ItemDetail key={producto.id} id={producto.id} titulo={producto.titulo} precio={producto.precio} imagen={producto.img} stock={producto.stock} descr={producto.descr} />
-                    </div>
-                )}
-        </>
+        <div className="itemDetailContainer">
+            <div className="container justify-content-center display-flex p-2 text-center">
+
+                {/* Si se esta cargando se muestra el mensaje, sino se muestra el ItemDetail */}
+
+                <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
+
+                    <h2>Item elegido:{producto.titulo}</h2>
+
+                    {cargando ? <Cargando /> : (
+                        <ItemDetail
+                            key={`detail-${producto.id}`}
+                            id={producto.id}
+                            titulo={producto.titulo}
+                            descr={producto.descr}
+                            precio={producto.precio}
+                            imagen={producto.img}
+                            stock={producto.stock}
+                        />)}
+
+                </div>
+            </div>
+        </div>        
     )
 }
 
