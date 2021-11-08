@@ -1,12 +1,16 @@
-const Header = () =>{
+import { Link } from "react-router-dom"
+
+const Header = () => {
     return (
-        <header className= "container-fluid fondo">
+        <header className="container-fluid fondo">
             <div>
                 <div>
-                    <img src="img/imgSitio/LOGO.png" width="50%" height="auto" class="imgLogo"
-                            alt="ALCHEMISTSTORE"/>
+                    <Link to="/">
+                        <img src="img/imgSitio/LOGO.png" width="50%" height="auto" class="imgLogo"
+                            alt="ALCHEMISTSTORE" />
+                    </Link>
                 </div>
-            </div>          
+            </div>
         </header>
     )
 }

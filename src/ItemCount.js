@@ -22,14 +22,7 @@ const ItemCount = (props) => {
                 setStock(stock + 1)
                 setUnidades(unidades - 1)
             }
-        },
-        onAdd: () => {
-            if (unidades === 0) {
-                alert("El valor ingresado debe ser mayor a 0")
-            } else {
-            alert("Se ha agregado " + unidades + " unidades")
-            }
-        },
+        }
     }
 
     return (
@@ -41,7 +34,7 @@ const ItemCount = (props) => {
             </div>
 
             <div className="container d-flex justify-content-center">
-                <Button variant="primary" onClick={handleStock.onAdd} disabled={stock === 0 && unidades === 0 }>Agregar al carrito</Button>
+                <Button variant="primary" onClick={()=>props.onAdd({unidades})} >Agregar al carrito {unidades} unidades</Button>
             </div>
             <div className="container d-flex justify-content-center">
                 <p>Stock disponible: {stock}</p>

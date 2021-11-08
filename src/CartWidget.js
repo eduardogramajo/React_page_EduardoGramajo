@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom"
+import { Nav } from "react-bootstrap"
+
 const CartWidget = () => {
     return (
         <div>
-            <a href="#">
-                <span className="material-icons carrito">
+            <Nav as={Link} to="/cart">
+                <span className="material-icons carrito" >
                     shopping_cart
                 </span>
-            </a>
+            </Nav>
         </div>
     )
 }

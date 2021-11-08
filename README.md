@@ -1,3 +1,21 @@
+Proyecto en desarrollo por Eduardo Gramajo para el curso de React JS de CoderHouse
+
+# ALCHEMIST STORE
+Somos una web dedicada a la venta de figuras de colección. 
+
+Contamos con un amplio catálogo. 
+
+Para este proyecto se incorporó:
+React-Bootstrap: [https://react-bootstrap.github.io/]
+
+Instalación:
+npm install bootstrap react-bootstrap import 'bootstrap/dist/css/bootstrap.min.css'
+
+Instalación
+npm install react-router-dom
+
+_______________________________________________________
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

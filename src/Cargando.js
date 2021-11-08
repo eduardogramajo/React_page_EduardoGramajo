@@ -4,7 +4,8 @@ import { Button } from 'react-bootstrap'
 const Cargando = () => {
     return (
         <div>
-            <Button variant="primary" disabled>
+            <img src="https://res.cloudinary.com/dvsraj89p/image/upload/v1636309355/sharin_lm9da1.gif" alt="" />
+            {/* <Button variant="primary" disabled>
                 <Spinner
                     as="span"
                     animation="border"
@@ -23,7 +24,7 @@ const Cargando = () => {
                     aria-hidden="true"
                 />
                 Cargandoo...
-            </Button>
+            </Button> */}
         </div >
     )
 }
