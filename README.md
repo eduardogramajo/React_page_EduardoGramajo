@@ -5,13 +5,13 @@ Somos una web dedicada a la venta de figuras de colección.
 
 Contamos con un amplio catálogo. 
 
-Para este proyecto se incorporó:
+# Para este proyecto se incorporó:
 React-Bootstrap: [https://react-bootstrap.github.io/]
 
-Instalación:
+# Instalación:
 npm install bootstrap react-bootstrap import 'bootstrap/dist/css/bootstrap.min.css'
 
-Instalación
+# Instalación
 npm install react-router-dom
 
 _______________________________________________________

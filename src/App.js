@@ -2,11 +2,12 @@ import Header from "./Header";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import Contacto from "./Contacto";
+import Info from "./Info";
+import Cart from "./Cart";
+import { CartFunction } from "./context/CartContext";
 import ItemListContainer from "./ItemListContainer/ItemListContainer.js";
 import ItemDetailContainer from "./ItemDetailContainer/ItemDetailContainer";
-import Info from "./Info";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Cart from "./Cart";
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
 
     return (
         <BrowserRouter>
+            <CartFunction>
             <div className="container-fluid">
 
                 <Header />
@@ -22,27 +24,27 @@ const App = () => {
 
                 <Switch>
                     <Route path="/" exact>
-                        <ItemListContainer mensaje={`Bienvenido ${user} a Alchemist Store tu mundo coleccionable`} tit="NUESTROS PRODUCTOS"/>
+                        <ItemListContainer mensaje={`Bienvenido ${user} a Alchemist Store tu mundo coleccionable`} tit="NUESTROS PRODUCTOS" />
                     </Route>
 
                     <Route path="/item/:id_item" exact>
-                        <ItemDetailContainer titulo="ITEM SELECCIONADO"/>
+                        <ItemDetailContainer titulo="ITEM SELECCIONADO" />
                     </Route>
 
                     <Route path="/cart" exact>
-                        <Cart  titulo="CARRITO"/>
+                        <Cart titulo="CARRITO" />
                     </Route>
 
                     <Route path="/:filtrado/:id_filtrado" exact>
-                        <ItemListContainer mensaje={""}/>
+                        <ItemListContainer mensaje={""} />
                     </Route>
 
                     <Route path="/info" exact>
-                        <Info/>
+                        <Info />
                     </Route>
 
                     <Route path="/contacto" exact>
-                        <Contacto/>
+                        <Contacto />
                     </Route>
 
                 </Switch>
@@ -50,7 +52,8 @@ const App = () => {
                 <Footer />
 
             </div>
-        </BrowserRouter>
+        </CartFunction>
+        </BrowserRouter >
     )
 }
 

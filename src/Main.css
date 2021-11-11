@@ -11,13 +11,16 @@
     height: 410px;
 }
 
-h1 {
+h1, h3 {
     font-size: 4rem;
     color: #fff;
     text-shadow: 0 0 7px black, 0 0 8px black, 0 0 21px black, 0 0 42px red, 0 0 82px red, 0 0 92px red, 0 0 102px red, 0 0 151px red;
     font-family: 'Bebas Neue', cursive;
 }
-
+h3{
+    display: block;
+    margin-left: 450px;
+}
 h2 {
     font-family: 'Bebas Neue', cursive;
     text-align: center;
@@ -114,4 +117,8 @@ a>.carrito:link {
 .botonVolver{
     display: block;
     width: 10%;
+}
+
+.botonDelete{
+    margin-bottom: 50px;
 }
