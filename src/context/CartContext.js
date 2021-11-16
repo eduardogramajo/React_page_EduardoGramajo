@@ -42,6 +42,7 @@ const CartFunction = ({ children }) => {
         const filterCart = cart.filter((producto) => producto.id !== id)
         setCart(filterCart)
         setTotal(total-(cantidad*precio))
+        setUnidades(unidades - 1)
     }
 
     const clearCart = () => {
