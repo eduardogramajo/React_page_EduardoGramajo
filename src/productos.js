@@ -13,7 +13,7 @@ const productos = [
         id: "2",
         titulo: "MAZINKAISER CHOGOKIN",
         precio: "35000",
-        img: "..//img/figuras/BANDAI/mazin.jpg",
+        img: "https://res.cloudinary.com/dvsraj89p/image/upload/v1637105331/mazin_uwysvl.jpg",
         stock: "12",
         categoria: "diecast",
         marca:"bandai"
@@ -51,6 +51,7 @@ const productos = [
         precio: "6000",
         img: "..//img/figuras/BANPRESTO/goku.jpg",
         stock: "15",
+        descr: "La aclamada y elogiada marca Banpresto trae su version de Super Saiyan 2 Son Goku, estrella de la legendaria franquicia Dragon Ball Z,En esta pieza de la linea Dokkan Battle Collab se muestran una creación increíblemente detallada en su esculpido y colores.",
         categoria: "pvc",
         marca:"banpresto"
     },

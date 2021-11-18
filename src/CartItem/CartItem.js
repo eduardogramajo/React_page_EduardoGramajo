@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { Context } from "../context/CartContext"
 import { Container, Card, Button, Row, Col } from "react-bootstrap"
 
-const CartItem = ({ id, titulo, precio, imagen, cantidad, subtotal }) => {
+const CartItem = ({ id, titulo, precio, img, cantidad, subtotal }) => {
 
     const { onDelete } = useContext(Context)
 
@@ -11,7 +11,7 @@ const CartItem = ({ id, titulo, precio, imagen, cantidad, subtotal }) => {
             <Card className="" style={{ width: '100%' }}>
                 <Row className='no-gutters'>
                     <Col className="col-sm">
-                        <Card.Img className="rounded" variant="top" src={imagen} alt={titulo} style={{ width: "100%" }} />
+                        <Card.Img className="rounded" variant="top" src={img} alt={titulo} style={{ width: "100%" }} />
                     </Col>
                     <Col className="col-lg">
                         <Card.Body>

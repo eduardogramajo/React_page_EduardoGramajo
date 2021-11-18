@@ -24,7 +24,7 @@ const Cart = () => {
                             id={producto.id}
                             titulo={producto.titulo}
                             precio={producto.precio}
-                            imagen={producto.img}
+                            img={producto.img}
                             cantidad={producto.cantidad}
                             subtotal={producto.subtotal}
                         />
