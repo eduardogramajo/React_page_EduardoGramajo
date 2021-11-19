@@ -15,70 +15,52 @@ const ItemListContainer = (props) => {
     const { filtrado, id_filtrado } = useParams()
 
 
-    // const cargaProductos = () => {
-    //     setCargando(true);
-    //     setProductos([]);
-    // }
+    const cargaProductos = () => {
+        setCargando(true);
+        setProductos([]);
+    }
 
 
 
     useEffect(() => {
         // let productos_filtrados
-        if (id_filtrado) {
-            const dbQuery = getFirestore()
-            dbQuery.collection('items').where('id_filtrado', '==', id_filtrado).get()
-            .then(resp => {
-                setProductos(resp.docs.map(productos => ( {id: productos.id, ... productos.data() } ) ))
-            })
-            .catch(err => console.log(err))
-            .finally(()=>setCargando(false))
+        if (id_filtrado != null) {
 
-            // productos_filtrados = () => {
-            //     return new Promise((resolve, reject) => {
+            cargaProductos()
 
-            //         cargaProductos()
+            if (filtrado === "categoria") {
 
-            //         setTimeout(() => {
-            //             if (filtrado === "categoria") {
+        const dbQuery = getFirestore()
+        dbQuery.collection('productos').where('categoria', '==', id_filtrado).get()
+          .then(resp => {
+            setProductos(resp.docs.map(productos => ({ id: productos.id, ...productos.data() })))
+          })
+          .catch(err => console.log(err))
+          .finally(() => setCargando(false))
 
-            //                 const productos_categoria = productos_list.filter(producto => producto.categoria === id_filtrado)
-            //                 resolve(productos_categoria)
-            //             } else if (filtrado === "marca") {
+      } else if (filtrado === "marca") {
 
-            //                 const productos_marca = productos_list.filter(producto => producto.marca === id_filtrado)
-            //                 resolve(productos_marca)
-            //             }
-            //             else {
-            //                 console.log("No tendría que haber entrado acá")
-            //             }
-            //         }, 2000)
-            //     })
-            // }
-        } else {
-            const dbQuery = getFirestore()
-            dbQuery.collection('items').get()
-            .then(resp => {
-                setProductos(resp.docs.map(productos => ( {id: productos.id, ... productos.data() } ) ))
-            })
-            .catch(err => console.log(err))
-            .finally(()=>setCargando(false))
-        }
-        //     productos_filtrados = () => {
-        //         return new Promise((resolve, reject) => {
+        const dbQuery = getFirestore()
+        dbQuery.collection('productos').where('marca', '==', id_filtrado).get()
+          .then(resp => {
+            setProductos(resp.docs.map(productos => ({ id: productos.id, ...productos.data() })))
+          })
+          .catch(err => console.log(err))
+          .finally(() => setCargando(false))
+      } else {
+        console.log("No tendría que haber entrado acá")
+      }
 
-        //             cargaProductos()
+    } else {  // Si no se aplican filtros, imprime todos los productos.
 
-        //             setTimeout(() => {
-        //                 resolve(productos_list)
-        //             }, 2000)
-        //         })
-        //     }
-        // }
-
-        // productos_filtrados().then((item) => {
-        //     setProductos(item)
-        //     setCargando(false)
-        // })
+      const dbQuery = getFirestore()
+      dbQuery.collection('productos').get()
+        .then(resp => {
+          setProductos(resp.docs.map(producto => ({ id: producto.id, ...producto.data() })))
+        })
+        .catch(err => console.log(err))
+        .finally(() => setCargando(false))
+    }
 
     }, [filtrado, id_filtrado])
 

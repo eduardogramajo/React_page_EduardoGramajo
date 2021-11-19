@@ -13,7 +13,6 @@ const ItemDetail = ({id, imagen, titulo, precio, stock, descr}) => {
     const adding = (props) =>{ 
         setCompra(true)
         onAdd({id, titulo, precio, imagen}, props.unidades)
-        // alert(`Agregaste ${props.unidades} unidades al carrito`)
     }
 
     return (
