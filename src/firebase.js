@@ -14,6 +14,9 @@ const firebaseConfig = {
   const app = firebase.initializeApp(firebaseConfig)
 
   export function getFirestore(){
-      
       return firebase.firestore(app)
+  }
+
+  export function formatDate(date) {
+    return firebase.firestore.Timestamp.fromDate(date)
   }

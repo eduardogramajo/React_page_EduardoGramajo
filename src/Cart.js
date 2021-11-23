@@ -1,42 +1,117 @@
 import { Container, Button } from 'react-bootstrap'
-import React, { useContext } from "react"
+import React, {useState, useContext } from "react"
 import { Context } from "./context/CartContext"
+import {Link} from 'react-router-dom'
+import { getFirestore, formatDate } from './firebase'
 import CartItem from "./CartItem/CartItem"
+import Cargando from './Cargando'
 
 const Cart = () => {
     const { cart, total, clearCart } = useContext(Context)
+  const [loading, setLoading] = useState(false)     // Mientras se procesa la compra, se muestra el loading
+  //const [userInfo, setUserInfo] = useState(null)  // Para formulario, falta implementar formulario
+  const [orderId, setOrderId] = useState(null)
 
-
-    if (cart.length === 0) {
-        return (
-            <Container>
-                <h3>El Carrito esta vacio</h3>
-            </Container>
-        )
+  const createOrder = async () => {
+    setLoading(true)
+    const user = {
+      nombre: "Carlos",
+      email: "email@test.com",
+      telefono: "44445555",
     }
+    const cartItems = cart.map((cart) => ({
+      id: cart.id,
+      title: cart.nombre,
+      quantity: cart.cantidad
+    }))
+    await newOrder(cartItems, user)
+    setLoading(false);
+  }
+
+  const newOrder = async (cartItems, user) => {
+    const db = getFirestore()
+    const orders = db.collection("orders")
+    const newOrderInfo = {
+      buyer: user,
+      items: cartItems,
+      date: formatDate(new Date()),
+      total: total,
+    }
+    try {
+      const { id } = await orders.add(newOrderInfo)
+      console.log('Su compra se guardo bajo el id: ', id)
+      console.log("Orden completa: ", newOrderInfo)
+      setOrderId(id)
+      clearCart()
+    } catch (err) {
+      console.log("Ocurrió un error en el guardado")
+      console.log(err);
+    }
+  }
+
+  const showCart = () => {
+    return (
+      <>
+        {
+          cart.map((producto) =>
+            <CartItem
+              key={`cart-${producto.id}`}
+              id={producto.id}
+              title={producto.nombre}
+              price={producto.precio}
+              pictureUrl={producto.imagen}
+              cantidad={producto.cantidad}
+              subtotal={producto.subtotal}
+            />
+          )
+        }
+        < h2 > Total del carrito: ${total}</h2 >
+        <Container>
+          <Button variant="danger" onClick={() => clearCart()}>Vaciar carrito</Button>
+          <Button variant="primary" onClick={() => createOrder()}>Finalizar Compra(implementando)</Button>
+        </Container>
+      </>
+
+    )
+  }
+
+  const emptyCart = () => {
+    return (
+      <>
+        <p>El carrito está vacío</p>
+        <Button variant="primary" as={Link} to='/'>Volver al inicio</Button>
+      </>
+    )
+  }
+
+  const orderSuccess = () => {
+    return (
+      <>
+        <p>Su orden ha sido procesada con éxito.</p>
+        <Button variant="primary" as={Link} to='/'>Volver al inicio</Button>
+      </>
+    )
+  }
+
+  const showContent = () => {
+    if (cart.length === 0 && orderId === null)
+      return emptyCart()
+    if (orderId !== null)
+      return orderSuccess()
+    if (cart.length > 0)
+      return showCart()
+  }
+
+
     return (
         <div>
-            <Container className="container align-top justify-content-center p-2 text-center ">
-                <Container>
-                    {cart.map((producto) =>
-                        <CartItem
-                            key={`cart-${producto.id}`}
-                            id={producto.id}
-                            titulo={producto.titulo}
-                            precio={producto.precio}
-                            img={producto.img}
-                            cantidad={producto.cantidad}
-                            subtotal={producto.subtotal}
-                        />
-                    )}
-                </Container>
-                <Container>
-                    <h2>TOTAL:$ {total}</h2>
-                    <Button onClick={() => clearCart()}>Vaciar carrito</Button>
-                    <Button className="vaciar">Finalizar Comprar</Button>
-                </Container>
-            </Container>
-        </div >
+      <Container className="container align-top justify-content-center p-2 text-center ">
+        <h2>Soy el carrito</h2>
+        <Container>
+          {loading ? <Cargando /> : showContent()}
+        </Container>
+      </Container>
+    </div >
     )
 }
 
