@@ -1,11 +1,10 @@
 import ItemDetail from "./ItemDetail/ItemDetail"
-// import productos_list from "../productos"
 import { useState, useEffect } from 'react'
 import { useParams } from "react-router"
-import Cargando from "..//Cargando"
+import Cargando from "../componentes/Cargando"
 import { getFirestore } from "../firebase"
 
-const ItemDetailContainer = (titulo) => {
+const ItemDetailContainer = () => {
 
 
     const [producto, setProducto] = useState([])
@@ -43,7 +42,7 @@ const ItemDetailContainer = (titulo) => {
 
                 {/* Si se esta cargando se muestra el mensaje, sino se muestra el ItemDetail */}
 
-                <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
+                <div className="container-fluid row  d-flex justify-content-center my-3 text-center tarjetasProductos">
 
                     <h2>Item elegido:{producto.titulo}</h2>
 
@@ -57,7 +56,6 @@ const ItemDetailContainer = (titulo) => {
                             imagen={producto.img}
                             stock={producto.stock}
                         />)}
-
                 </div>
             </div>
         </div>

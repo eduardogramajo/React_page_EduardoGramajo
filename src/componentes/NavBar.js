@@ -1,4 +1,4 @@
-import CartWidget from "./CartWidget"
+import CartWidget from "../CartWidget"
 import { Link } from "react-router-dom"
 import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap'
 

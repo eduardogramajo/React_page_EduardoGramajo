@@ -1,8 +1,8 @@
 import {Card, Button} from "react-bootstrap"
-import ItemCount from "../../ItemCount"
+import ItemCount from "../../componentes/ItemCount"
 import { Link } from "react-router-dom"
 import {useState, useContext} from "react"
-import { Context } from "../../context/CartContext"
+import { Context } from "../../componentes/context/CartContext"
 
 const ItemDetail = ({id, imagen, titulo, precio, stock, descr}) => {
     
@@ -12,7 +12,7 @@ const ItemDetail = ({id, imagen, titulo, precio, stock, descr}) => {
 
     const adding = (props) =>{ 
         setCompra(true)
-        onAdd({id, titulo, precio, imagen}, props.unidades)
+        onAdd({id, titulo, precio, imagen }, props.unidades)
     }
 
     return (

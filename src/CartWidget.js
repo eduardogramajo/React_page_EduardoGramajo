@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { Nav, Container } from "react-bootstrap"
 import { FaShoppingCart } from "react-icons/fa";
 import { useContext } from "react"
-import { Context } from "./context/CartContext"
+import { Context } from "./componentes/context/CartContext"
 
 const CartWidget = () => {
 

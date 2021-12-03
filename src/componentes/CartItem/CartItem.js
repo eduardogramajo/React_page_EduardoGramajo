@@ -1,8 +1,9 @@
 import { useContext } from "react"
 import { Context } from "../context/CartContext"
-import { Container, Card, Button, Row, Col } from "react-bootstrap"
+import { Container, Card, Button, Row, Col } from 'react-bootstrap'
 
-const CartItem = ({ id, titulo, precio, imagen, cantidad, subtotal }) => {
+
+const CartItem = ({ id, titulo, imagen, precio, cantidad, subtotal }) => {
 
     const { onDelete } = useContext(Context)
 
@@ -39,6 +40,5 @@ const CartItem = ({ id, titulo, precio, imagen, cantidad, subtotal }) => {
         </Container>
     )
 }
-
 
 export default CartItem

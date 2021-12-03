@@ -1,7 +1,6 @@
 import ItemList from "./ItemList/ItemList"
-// import productos_list from "../productos"
 import { useState, useEffect } from 'react'
-import Cargando from "../Cargando"
+import Cargando from "../componentes/Cargando"
 import { useParams } from "react-router-dom"
 import {getFirestore} from "../firebase"
 
@@ -20,10 +19,7 @@ const ItemListContainer = (props) => {
         setProductos([]);
     }
 
-
-
     useEffect(() => {
-        // let productos_filtrados
         if (id_filtrado != null) {
 
             cargaProductos()

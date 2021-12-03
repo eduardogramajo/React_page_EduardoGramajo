@@ -1,5 +1,4 @@
 import firebase from 'firebase/app';
-
 import 'firebase/firestore';
 
 const firebaseConfig = {
@@ -15,8 +14,4 @@ const firebaseConfig = {
 
   export function getFirestore(){
       return firebase.firestore(app)
-  }
-
-  export function formatDate(date) {
-    return firebase.firestore.Timestamp.fromDate(date)
   }
