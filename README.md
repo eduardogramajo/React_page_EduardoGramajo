@@ -21,9 +21,10 @@ Contamos con un amplio catálogo.
 - Kotobukiya
 - Banpresto
 - Mcfarlane
+____________________________________________________
 
 ## Recorrido Rápido por el Sitio:
-![GIF APP](https://media.giphy.com/media/l0hHznhTSWD75YIwsp/giphy.gif)
+![Imagen](public/giphy.gif)
 
 ---------------------------------------
 
