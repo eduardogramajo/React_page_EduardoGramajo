@@ -1,6 +1,7 @@
 **Proyecto en desarrollo por Eduardo Gramajo para el curso de React JS de CoderHouse**
 
 # *Entrega final de React Comision 16975:*
+
 **NOMBRE:**
 Eduardo
 
