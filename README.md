@@ -23,7 +23,7 @@ Contamos con un amplio catálogo.
 
 ## **Recorrido Rápido por el Sitio:**
 
-## ![](public/img/video_screen.webm)
+![](https://media.giphy.com/media/l0hHznhTSWD75YIwsp/giphy.gif)
 ---------------------------------------
 
 # **La  navegacion incluye:**
