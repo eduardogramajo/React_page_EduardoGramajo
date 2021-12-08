@@ -24,7 +24,7 @@ Contamos con un amplio catálogo.
 
 ## **Recorrido Rápido por el Sitio:**
 
-![](https://media.giphy.com/media/l0hHznhTSWD75YIwsp/giphy.gif)
+![GIF APP](https://media.giphy.com/media/l0hHznhTSWD75YIwsp/giphy.gif)
 ---------------------------------------
 
 # **La  navegacion incluye:**
