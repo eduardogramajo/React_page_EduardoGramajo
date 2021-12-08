@@ -22,7 +22,7 @@ Contamos con un amplio catálogo.
 - Banpresto
 - Mcfarlane
 
-## **Recorrido Rápido por el Sitio:**
+## Recorrido Rápido por el Sitio:
 ![GIF APP](https://media.giphy.com/media/l0hHznhTSWD75YIwsp/giphy.gif)
 
 ---------------------------------------
