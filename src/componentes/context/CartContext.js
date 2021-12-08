@@ -8,6 +8,7 @@ const CartFunction = ({ children }) => {
     const [unidades, setUnidades] = useState(0)
     const [total, setTotal] = useState(0)
 
+
     const onAdd = (producto, cantidad) => {
 
         if (!isInCart(producto.id)) {
@@ -24,7 +25,9 @@ const CartFunction = ({ children }) => {
                 ]
             )
             setUnidades(unidades + 1) 
+            setTotal(total + (producto.precio * cantidad))
         } else {
+            
             const newCart = cart.map((item) => {
                 if (item.id === producto.id) {
                     item.cantidad += cantidad

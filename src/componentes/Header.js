@@ -7,7 +7,7 @@ const Header = () => {
             <div>
                 <div>
                     <Link to="/">
-                        <img src="img/imgSitio/LOGO.png" width="50%" height="auto" className="imgLogo"
+                        <img src="https://res.cloudinary.com/dvsraj89p/image/upload/v1638994757/LOGO_j7hucj.png" width="50%" height="auto" className="imgLogo"
                             alt="ALCHEMISTSTORE" />
                     </Link>
                 </div>
