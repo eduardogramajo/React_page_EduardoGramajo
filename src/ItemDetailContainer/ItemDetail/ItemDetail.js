@@ -17,13 +17,13 @@ const ItemDetail = ({id, imagen, titulo, precio, stock, descr}) => {
 
     return (
         <div>
-            <Card className="card p-3 bg-light rounded-3">
-                <Card.Img className="rounded-3 imgSet" variant="top" src={imagen} style={{ width: "45%"}} />
+            <Card className="card p-3 bg-light rounded-3 detalle">
+                <Card.Img className="rounded-3 imgSet" variant="top" src={imagen} style={{ width: "25%"}} />
                 <Card.Body>
                     <Card.Title className="text-center titArtDos">{titulo}</Card.Title>
                     <Card.Subtitle className="p-2 titArt " style={{ textAlign: "center" }}><strong>$ {precio}</strong></Card.Subtitle>
                     <Card.Text className="text-center titArt">{descr}</Card.Text>
-                    {!compra ? <ItemCount stock={stock} initial={1} onAdd={adding} />  : <Button as={Link} to="/cart">TERMINAR COMPRA</Button>}
+                    {!compra ? <ItemCount stock={stock} initial={1} onAdd={adding} />  : <Button as={Link} to="/cart" variant="danger">TERMINAR COMPRA</Button>}
                     <Button variant="primary" className="botonVolver" as={Link} to={'/'}>VOlVER</Button>
                 </Card.Body>
             </Card>

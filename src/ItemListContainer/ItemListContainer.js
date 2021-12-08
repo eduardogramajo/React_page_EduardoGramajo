@@ -47,7 +47,7 @@ const ItemListContainer = (props) => {
         console.log("No tendría que haber entrado acá")
       }
 
-    } else {  // Si no se aplican filtros, imprime todos los productos.
+    } else { 
 
       const dbQuery = getFirestore()
       dbQuery.collection('productos').get()

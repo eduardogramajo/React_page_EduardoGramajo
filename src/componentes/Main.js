@@ -11,7 +11,7 @@ import { Switch, Route } from 'react-router-dom'
 
 const Main = () => {
 
-    const user = "Eduardo"
+    
 
     return (
         <div className="container-fluid">
@@ -20,7 +20,7 @@ const Main = () => {
 
             <Switch>
                 <Route path="/" exact>
-                    <ItemListContainer mensaje={`Bienvenido ${user} a Alchemist Store tu mundo coleccionable`} tit="NUESTROS PRODUCTOS" />
+                    <ItemListContainer  tit="NUESTROS PRODUCTOS" />
                 </Route>
 
                 <Route path="/item/:id_item" exact>

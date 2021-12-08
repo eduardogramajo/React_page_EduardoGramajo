@@ -24,7 +24,7 @@ const Form = ({onChange}) => {
             <form action="">
                 <Container className="d-flex justify-content-center mt-2">
                     <div className="col-12 col-md-10 col-lg-6 bg-dark p-2 rounded">
-                        <h4 className="text-white text-center">Estos datos son necesarios para poder terminar su compra</h4>
+                        <h4 className="text-white text-center">Ingrese los datos para terminar su compra</h4>
                         <label htmlFor="nombre"></label>
                         <input name="nombre" className="form-control" type="text" placeholder="Nombre" defaultValue={formUser.name} onChange={(evt) => handleSubmit('name',evt)} id="inputText" required />
 

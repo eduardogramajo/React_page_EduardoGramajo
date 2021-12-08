@@ -39,9 +39,6 @@ const ItemDetailContainer = () => {
     return (
         <div className="itemDetailContainer">
             <div className="container justify-content-center display-flex p-2 text-center">
-
-                {/* Si se esta cargando se muestra el mensaje, sino se muestra el ItemDetail */}
-
                 <div className="container-fluid row  d-flex justify-content-center my-3 text-center tarjetasProductos">
 
                     <h2>Item elegido:{producto.titulo}</h2>

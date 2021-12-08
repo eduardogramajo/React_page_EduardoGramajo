@@ -28,13 +28,13 @@ const ItemCount = (props) => {
     return (
         <div className="container justify-content-center display-flex col-6 p-2 margen">
             <div className="container d-flex justify-content-around col-8 p-2">
-                <button className="btn btn-primary" onClick={handleStock.restarStock} disabled={stock === "0" && unidades === 0}> - </button>
+                <button className="btn btn-danger" onClick={handleStock.restarStock} disabled={stock === "0" && unidades === 0}> - </button>
                 <p>{unidades}</p>
-                <button className="btn btn-primary" onClick={handleStock.sumaStock} disabled={stock === "0" && unidades === 0} > + </button>
+                <button className="btn btn-danger" onClick={handleStock.sumaStock} disabled={stock === "0" && unidades === 0} > + </button>
             </div>
 
             <div className="container d-flex justify-content-center">
-                <Button variant="primary" onClick={() => props.onAdd({ unidades })} >Agregar al carrito {unidades} unidades</Button>
+                <Button variant="dark" onClick={() => props.onAdd({ unidades }) } >Agregar al carrito {unidades} unidades</Button>
             </div>
             <div className="container d-flex justify-content-center">
                 <p>Stock disponible: {stock}</p>

@@ -13,7 +13,6 @@ const Item = ({ id, titulo, precio, imagen }) => {
                 </Card.Body>
             </Card>
         </Container>
-
     )
 }
 

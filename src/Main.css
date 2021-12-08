@@ -1,132 +1,193 @@
 .imgLogo {
-    display: block;
-    margin: 0 auto;
-    margin-top: 50px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .fondo {
-    background-image: url(https://res.cloudinary.com/dvsraj89p/image/upload/v1636309734/banner_1_nvkb0g.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 410px;
+  background-image: url(https://res.cloudinary.com/dvsraj89p/image/upload/v1636309734/banner_1_nvkb0g.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 410px;
 }
 
-h1, h3 {
-    font-size: 4rem;
-    color: #fff;
-    text-shadow: 0 0 7px black, 0 0 8px black, 0 0 21px black, 0 0 42px red, 0 0 82px red, 0 0 92px red, 0 0 102px red, 0 0 151px red;
-    font-family: 'Bebas Neue', cursive;
+h1,
+h3 {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 0 0 7px black, 0 0 8px black, 0 0 21px black, 0 0 42px red,
+    0 0 82px red, 0 0 92px red, 0 0 102px red, 0 0 151px red;
+  font-family: "Bebas Neue", cursive;
 }
 
 h2 {
-    font-family: 'Bebas Neue', cursive;
-    text-align: center;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
 }
 
 a:link {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 a:hover {
-    color: rgb(15, 1, 1);
-    text-shadow: 2px 2px 3px rgb(245, 238, 238);
+  color: rgb(15, 1, 1);
+  text-shadow: 2px 2px 3px rgb(245, 238, 238);
 }
 
 .carrito {
-    margin-left: 20px;
-    font-size: 40px;
-    color: black;
+  margin-left: 20px;
+  font-size: 40px;
+  color: black;
 }
 
-a>.carrito:hover {
-    color: rgb(12, 149, 241);
+a > .carrito:hover {
+  color: rgb(12, 149, 241);
 }
 
-a>.carrito:link {
-    color: black;
+a > .carrito:link {
+  color: black;
 }
 
 .estilo {
-    font-size: 2rem;
-    color: black;
-    text-align: center;
-    font-weight: bold;
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+  font-weight: bold;
 }
 
 .margen {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .titArt {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2rem;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
 }
 
+.detalle {
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #f72105,
+    0 0 0.8rem #f72105, 0 0 2.8rem #f72105, inset 0 0 1.3rem #f72105;
+}
+.detalleDos {
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0414f0,
+    0 0 0.5rem #0414f0, 0 0 2.2rem #0414f0, inset 0 0 1.1rem #0414f0;
+}
 .figureSize {
-    width: 80%;
-    height: auto;
-    margin-left: 10%;
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
 }
 
 .figureBorde {
-    border: 2px solid black;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -ms-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+  border: 2px solid black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .figureBorde {
-    transition: all 2s;
+  transition: all 2s;
 }
 
 .figureBorde:hover {
-    z-index: 10;
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    -ms-transform: scale(2);
-    -o-transform: scale(2);
-    transform: scale(1.3);
+  z-index: 10;
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(1.3);
 }
 
 .imgSet {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .titArtDos {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 4rem;
+  font-family: "Bebas Neue", cursive;
+  font-size: 4rem;
 }
 
 #barra {
-    margin: 0 auto;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2rem;
+  margin: 0 auto;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
 }
 
-.botonVolver{
-    display: block;
-    width: 10%;
+.botonVolver {
+  display: block;
+  width: 10%;
 }
 
-.botonDelete{
-    margin-bottom: 50px;
+.botonDelete {
+  margin-bottom: 50px;
 }
 
-color{
-    background-color:red;
+color {
+  background-color: red;
 }
 
-.vaciar{
-    font-size: 1.5rem;
-    margin: 0 auto;
-    margin-top: 50px;
-    display:block
+.vaciar {
+  font-size: 1.5rem;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
+}
+
+footer {
+  height: 120px;
+  background-color: rgb(12, 149, 241);
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.logoFoot {
+  margin-left: 40px;
+}
+.tituloFig {
+  font-size: 2.8rem;
+  text-shadow: 0 0 7px black, 0 0 8px black, 0 0 21px black, 0 0 42px red,
+    0 0 82px red, 0 0 92px red, 0 0 102px red, 0 0 141px red;
+  padding-left: 50px;
+}
+
+.subtitulos {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+}
+
+h5 {
+  text-decoration: underline red;
+}
+
+.nezuko {
+  display: block;
+  margin: 0 auto;
+}
+
+.info {
+  font-size: 2rem;
+}
+.title {
+  display: block;
+  text-align: center;
+}
+.form{
+  width: 200px;
+  margin: 0 auto;
+}
+
+.cont{
+  text-align: center;
 }
