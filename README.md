@@ -23,8 +23,8 @@ Contamos con un amplio catálogo.
 - Mcfarlane
 
 ## **Recorrido Rápido por el Sitio:**
+![GIF APP](https://media.giphy.com/media/l0hHznhTSWD75YIwsp/giphy.gif)
 
-![](https://media.giphy.com/media/l0hHznhTSWD75YIwsp/giphy.gif)
 ---------------------------------------
 
 # **La  navegacion incluye:**
